@@ -35,6 +35,10 @@ while True:
     if choice.lower() =="y":
         print("Thanks for using our calculator!")
         break
+    if choice not in ["1", "2", "3", "4"]:
+        print("Invalid choice! Please enter 1-4 or Y.\n")
+        continue  
+         
     num1 = float(input("Enter your first number: "))
     num2 = float(input("Enter your second number: "))
 
@@ -52,5 +56,6 @@ while True:
         devition(num1,num2)
     else:
         print("Invalid choice please try again ")
+
 
 
