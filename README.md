@@ -24,8 +24,8 @@ This program performs basic arithmetic operations:
 - Python 3
 
 ## ▶️ How to Run step by step
-1. Open terminal on your linux
-2. apt install python3
+1. Open terminal on your kali linux
+2. sudo apt install python3
 3. git clone https://github.com/alamin-bd-dev/calculator
 4. cd calculator
 5. python calculator.py
