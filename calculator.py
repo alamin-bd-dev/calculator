@@ -1,0 +1,94 @@
+
+def addition(num1,num2):
+    result = num1 + num2
+    print("Result: ",num1,'+',num2,'=',result)
+
+def subtraction(num1,num2):
+    result = num1 - num2
+    print("Result: ",num1,'-',num2,'=',result)
+
+def multipication(num1,num2):
+    result = num1 * num2
+    print("Result: ",num1,'*',num2,'=',result)
+
+def devition(num1,num2):
+    while num2 == 0:
+        print("You can't devided by the 'zero'")
+        num2 = float(input("Please enter again you second number: "))
+
+    resul = num1 / num2
+    print("Result: ",num1,'/',num2,'=',resul)
+
+
+#Display to user
+import os
+logo =[
+    "\n||=====================================================================================================||"
+    "\n||  ▄▄▄▄               ▄▄▄▄                          ▄▄▄▄                                              || "
+    "\n||  ██▀▀▀▀█            ▀▀██                          ▀▀██                  ██                          ||"   
+    "\n|| ██▀        ▄█████▄    ██       ▄█████▄  ██    ██    ██       ▄█████▄  ███████    ▄████▄    ██▄████  ||"
+    "\n|| ██         ▀ ▄▄▄██    ██      ██▀    ▀  ██    ██    ██       ▀ ▄▄▄██    ██      ██▀  ▀██   ██▀      ||"
+    "\n|| ██▄       ▄██▀▀▀██    ██      ██        ██    ██    ██      ▄██▀▀▀██    ██      ██    ██   ██       ||"
+    "\n||  ██▄▄▄▄█  ██▄▄▄███    ██▄▄▄   ▀██▄▄▄▄█  ██▄▄▄███    ██▄▄▄   ██▄▄▄███    ██▄▄▄   ▀██▄▄██▀   ██       ||"
+    "\n||   ▀▀▀▀    ▀▀▀▀ ▀▀     ▀▀▀▀      ▀▀▀▀▀   ▀▀▀▀ ▀▀     ▀▀▀▀    ▀▀▀▀ ▀▀     ▀▀▀▀     ▀▀▀▀      ▀▀       ||"
+    "\n||________________________________________Al Amin______________________________________________________||"
+    "\n||_____________________________________________________________________________________________________||"
+    "\n||                                                                                                     ||"
+    "\n||                                                                                                     ||"
+    "\n||                                 Information Calculator                                              ||"
+    "\n||-----------------------------------------------------------------------------------------------------||"
+    "\n||                                                                                                     ||"
+    "\n||                       A simple command-line calculator built with Python..                          ||"
+    "\n|| |-------------------------------------------|-------------------------------------------------------||"
+    "\n|| |                  Features                 |                                                       ||"
+    "\n|| |-------------------------------------------|                                                       ||"
+    "\n|| |-✅ Interactive terminal interface         |                                                       ||"
+    "\n|| |-✅ Handles division by zero using loop    |                                                       ||"
+    "\n|| |-✅ Beginner-friendly Python project       |                                                       ||"
+    "\n|| |-✅ Clean and structured functions         |                                                       ||"
+    "\n|| |-------------------------------------------|                                                       ||"
+    "\n||=====================================================================================================||"
+
+    ]   
+   
+width = os.get_terminal_size().columns
+
+for line in logo:
+    print(line.center(width)) 
+print("\n")
+print("Wellcome to the calculator!")
+while True:
+
+    print("Type '1' if you want to addition'+'")
+    print("Type '2' if you want to subtraction'-'")
+    print("Type '3' if you wat to multipication'*'")
+    print("Type '4' if you want to devition'/'")
+    print("Type 'Y' if you want to exit from calculator!")
+    
+    choice = input("Enter your choice: ")
+    if choice.lower() =="y":
+        print("Thanks for using our calculator!")
+        break
+    if choice not in ["1", "2", "3", "4"]:
+        print("Invalid choice! Please enter 1-4 or Y.\n")
+        continue  
+
+    num1 = float(input("Enter your first number: "))
+    num2 = float(input("Enter your second number: "))
+
+
+    if choice =="1":
+        addition(num1,num2)
+        
+    elif choice =="2":
+        subtraction(num1,num2)
+
+    elif choice =="3":
+        multipication(num1,num2)
+        
+    elif choice =="4":
+        devition(num1,num2)
+    else:
+        print("Invalid choice please try again ")
+
+
